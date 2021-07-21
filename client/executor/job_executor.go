@@ -1,7 +1,12 @@
 package executor
 
+import "villcore.com/common/api"
+
 func init() {
 	// 1. register
+}
+
+type JobExecutor interface {
 }
 
 type XxlJobSimpleExecutor struct {
@@ -17,17 +22,6 @@ type XxlJobSimpleExecutor struct {
 
 	// TODO inner http server
 
-}
-
-type JobHandler struct {
-	name           string
-	jobHandler     func(param string) JobHandlerReturnResult
-	intHandler     func()
-	destroyHandler func()
-}
-
-type JobHandlerReturnResult struct {
-	// TODO
 }
 
 func New(config XxlJobConfig) *XxlJobSimpleExecutor {
@@ -58,6 +52,6 @@ func (e *XxlJobSimpleExecutor) removeJob(id int32) {
 
 }
 
-func (e *XxlJobSimpleExecutor) runJob(param TriggerParam) {
+func (e *XxlJobSimpleExecutor) runJob(param api.TriggerParam) bool {
 
 }
