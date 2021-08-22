@@ -1,4 +1,4 @@
-package core
+package misc
 
 type TriggerType string
 
@@ -24,4 +24,10 @@ const (
 	BLOCK_STRATEGY_SERIAL_EXECUTION BlockStrategyType = "BlockStrategyType"
 	BLOCK_STRATEGY_DISCARD_LATER    BlockStrategyType = "DISCARD_LATER"
 	BLOCK_STRATEGY_COVER_EARLY      BlockStrategyType = "COVER_EARLY"
+)
+
+const (
+	NONE     string = "NONE"
+	CRON     string = "CRON"
+	FIX_RATE string = "FIX_RATE"
 )
